@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Дмитрий и Анастасия</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .wedding-image-card {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.55);
+            backdrop-filter: blur(14px);
+            border-radius: 32px;
+            overflow: hidden;
+        }
+
+        .wedding-image-card .image-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .wedding-image-card img {
+            width: 100%;
+            display: block;
+            border-radius: 24px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+        }
+
+        @media (min-width: 1024px) {
+            .wedding-image-card {
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="grain"></div>
+
+    <section class="hero">
+
+        <img src="floral.svg" class="hero-floral floral-left" alt="">
+        <img src="floral.svg" class="hero-floral floral-right" alt="">
+
+        <div class="hero-glow hero-glow-left"></div>
+        <div class="hero-glow hero-glow-right"></div>
+
+        <div class="hero-content">
+
+            <p class="subtitle">Wedding Day</p>
+
+            <h1 class="hero-title">
+                Дмитрий <span>&</span> Анастасия
+            </h1>
+
+            <div class="hero-date">
+                10 июля 2026
+            </div>
+
+            <p class="hero-text">
+                Приглашаем вас разделить с нами
+                самый важный день нашей жизни
+            </p>
+
+            <div class="countdown" id="countdown">
+
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <small>дней</small>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <small>часов</small>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <small>минут</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+        <h2 class="section-title">Программа дня</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-time">16:00</div>
+
+                <div class="timeline-content glass-card">
+                    <h3>Сбор гостей</h3>
+                    <p>Встреча гостей и приветственный фуршет</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-time">17:00</div>
+
+                <div class="timeline-content glass-card">
+                    <h3>Начало мероприятия</h3>
+                    <p>Церемония, праздничный ужин и тёплая атмосфера</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-time">23:00</div>
+
+                <div class="timeline-content glass-card">
+                    <h3>Завершение вечера</h3>
+                    <p>Финальные объятия, музыка и счастливые воспоминания</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <h2 class="section-title">Место проведения</h2>
+
+        <div class="glass-card location-card">
+
+            <h3 class="location-title">
+                База отдыха «Швейцария»
+            </h3>
+
+            <p class="location-address">
+                Ульяновск<br>
+                Старосельдинская улица, 56
+            </p>
+
+            <div class="map-links">
+
+                <a href="https://2gis.ru/ulyanovsk/geo/70030076214078049" target="_blank">
+                    2ГИС
+                </a>
+
+                <a href="https://yandex.ru/maps/-/CPg3BOPk" target="_blank">
+                    Яндекс Карты
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2 class="section-title">Дресс-код</h2>
+
+        <div class="glass-card info-card">
+
+            <p>
+                Мы будем рады видеть каждого из вас
+                в вашем самом красивом образе!
+            </p>
+
+            <p>
+                Наряжайтесь, сияйте, будьте собой — главное,
+                чтобы вам было комфортно и радостно.
+            </p>
+
+            <p>
+                Пусть этот день запомнится яркими улыбками
+                и элегантными нарядами.
+            </p>
+
+        </div>
+
+        <div class="glass-card info-card wedding-image-card">
+            <div class="image-wrapper">
+                <img src="dresscode-modern.png" alt="Дресс-код свадьбы">
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="important-card">
+            <h3>🍼 Важная информация</h3>
+
+            <p>
+                Дорогие друзья, наша свадьба планируется как взрослое мероприятие.
+                Мы будем очень признательны, если вы оставите ваших малышей
+                в надёжных руках на время торжества.
+            </p>
+
+            <p>
+                Это позволит вам расслабиться и в полной мере насладиться праздником,
+                а нам — создать атмосферу, подходящую для взрослой компании.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2 class="section-title">Фотозона</h2>
+
+        <div class="glass-card info-card">
+
+            <p class="emoji">📸</p>
+
+            <p>
+                На нашей свадьбе будет оборудована фотозона
+                для создания ярких снимков!
+            </p>
+
+            <p>
+                Фотографируйтесь, веселитесь, ловите момент.
+                Все ваши фотографии просим загружать
+                в наше общее облако — так мы вместе соберём
+                коллекцию воспоминаний об этом дне.
+            </p>
+
+            <p class="small-text">
+                Ссылка на облако будет добавлена ближе к дате свадьбы
+            </p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2 class="section-title">Подарки</h2>
+
+        <div class="glass-card info-card">
+
+            <p class="emoji">💌</p>
+
+            <p>
+                Ваше присутствие на нашей свадьбе —
+                это уже самый ценный подарок для нас!
+            </p>
+
+            <p>
+                Если вы хотите сделать нам подарок,
+                мы будем особенно рады денежным конвертам.
+                Это поможет нам воплотить в жизнь
+                наши совместные мечты и планы.
+            </p>
+
+            <p>
+                Но главное — это ваша искренняя радость
+                и тёплые пожелания ❤️
+            </p>
+
+        </div>
+
+        <div class="glass-card info-card wedding-image-card">
+            <div class="image-wrapper">
+                <img src="gifts-modern.png" alt="Подарки на свадьбу">
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2 class="section-title">Подтверждение присутствия</h2>
+
+        <div class="glass-card form-card">
+
+            <p>
+                Пожалуйста, заполните анкету гостя,
+                чтобы мы могли лучше подготовиться к вашему приходу
+                и учесть все ваши пожелания
+            </p>
+
+            <p class="deadline">
+                ⏰ Просим подтвердить своё присутствие до 1 июня 2026
+            </p>
+
+            <form id="wedding-form">
+
+                <input type="hidden" name="accessKey" value="sf_8eeb4dab58a34fdbd1b41a7d">
+
+                <input type="hidden" name="subject" value="Новый ответ на свадебную анкету">
+
+                <input type="hidden" name="replyTo" value="@">
+
+                <input type="text" name="name" placeholder="Ваше имя и фамилия *" required>
+
+                <select name="attendance" required>
+                    <option value="">Сможете ли присутствовать? *</option>
+                    <option value="yes">Да, обязательно буду!</option>
+                    <option value="no">К сожалению, не смогу</option>
+                </select>
+
+                <input type="number" name="guests" placeholder="Количество гостей (включая вас)" min="1" max="5">
+
+                <input type="tel" name="phone" placeholder="Телефон для связи *" required>
+
+                <label style="text-align: left; font-size: 0.95rem; color: #6b7280; margin-top: 0.5rem;">
+                    Предпочтения по напиткам (можно выбрать несколько):
+                </label>
+
+                <div
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; text-align: left; padding: 0.5rem 0;">
+
+                    <label style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" name="drinks" value="Красное вино">
+                        Красное вино
+                    </label>
+
+                    <label style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" name="drinks" value="Белое вино">
+                        Белое вино
+                    </label>
+
+                    <label style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" name="drinks" value="Шампанское">
+                        Шампанское
+                    </label>
+
+                    <label style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" name="drinks" value="Крепкие напитки">
+                        Крепкие напитки
+                    </label>
+
+                    <label style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" name="drinks" value="Безалкогольные">
+                        Безалкогольные
+                    </label>
+
+                </div>
+
+                <input type="text" name="allergies" placeholder="Есть ли аллергия на продукты?">
+
+                <input type="text" name="song" placeholder="Ваша любимая песня для танцпола 🎵">
+
+                <textarea name="message" placeholder="Пожелания, комментарии или особые предпочтения"></textarea>
+
+                <button type="submit">
+                    Отправить анкету
+                </button>
+
+                <p id="form-status"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>С любовью, Дмитрий и Анастасия</p>
+        <span>#ДмитрийИАнастасия2026</span>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

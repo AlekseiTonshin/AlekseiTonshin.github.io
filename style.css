@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f8f5ef;
+    color: #5f675f;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+.grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: radial-gradient(#000 0.5px, transparent 0.5px);
+    background-size: 4px 4px;
+    z-index: 999;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #faf7f1 0%, #f3efe6 100%);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: url('corner-accent.svg') no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: url('corner-accent.svg') no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+    transform: rotate(180deg);
+}
+
+.hero-glow {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.35;
+}
+
+.hero-glow-left {
+    top: -120px;
+    left: -120px;
+    background: rgba(198, 162, 122, 0.35);
+}
+
+.hero-glow-right {
+    bottom: -120px;
+    right: -120px;
+    background: rgba(133, 155, 128, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+}
+
+.subtitle {
+    letter-spacing: 0.45rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #b69063;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 6rem;
+    line-height: 1.1;
+    color: #566556;
+}
+
+.hero-title span {
+    color: #b69063;
+    margin: 0 0.5rem;
+}
+
+.hero-date {
+    margin-top: 2rem;
+    font-size: 2.8rem;
+    color: #b69063;
+}
+
+.hero-text {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    min-width: 120px;
+    padding: 1.7rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 3rem;
+    color: #b69063;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.countdown-item small {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    color: #8f8f8f;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+section {
+    padding: 5rem 1.5rem;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3.3rem;
+    margin-bottom: 3rem;
+    color: #566556;
+}
+
+/* =========================================
+   GLASS CARD
+========================================= */
+
+.glass-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(22px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(198, 162, 122, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.glass-card::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, rgba(157, 179, 155, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 95px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, #d2c3ab, #9dad98);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: stretch;
+}
+
+.timeline-time {
+    min-width: 80px;
+    font-size: 1.7rem;
+    color: #b69063;
+    font-family: 'Cormorant Garamond', serif;
+    padding-top: 1rem;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    position: relative;
+    flex: 1;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #b69063;
+    box-shadow: 0 0 0 8px rgba(182, 144, 99, 0.14);
+}
+
+.timeline-content h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   INFO BLOCKS
+========================================= */
+
+.location-card,
+.info-card,
+.form-card {
+    text-align: center;
+}
+
+.location-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.map-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.map-links a,
+button {
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #c6a27a, #869885);
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(182, 144, 99, 0.22);
+}
+
+.map-links a:hover,
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   IMPORTANT CARD
+========================================= */
+
+.important-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 32px;
+    background: linear-gradient(135deg, #fff8ef, #f7efe3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(198, 162, 122, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.important-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(198, 162, 122, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.important-card::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(198, 162, 122, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.important-card h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #b69063;
+}
+
+.info-card p,
+.important-card p,
+.form-card p {
+    margin-bottom: 1rem;
+}
+
+.emoji {
+    font-size: 3rem;
+}
+
+.small-text {
+    font-size: 0.95rem;
+    color: #8a8a8a;
+}
+
+.deadline {
+    color: #b69063;
+    font-weight: 600;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+input,
+select,
+textarea {
+    padding: 1rem 1.2rem;
+    border-radius: 18px;
+    border: 1px solid #e7dfd4;
+    background: rgba(255, 255, 255, 0.88);
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #5d6b5b, #889885);
+    color: white;
+}
+
+footer span {
+    display: block;
+    margin-top: 1rem;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   WEDDING IMAGE BLOCKS
+========================================= */
+
+.wedding-image-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(14px);
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.wedding-image-card .image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.wedding-image-card img {
+    width: 100%;
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        padding: 7rem 1.2rem 5rem;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0.4rem;
+    }
+
+    .subtitle {
+        letter-spacing: 0.28rem;
+        font-size: 0.72rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        line-height: 1.05;
+        word-break: break-word;
+    }
+
+    .hero-title span {
+        display: inline-block;
+        margin: 0 0.15rem;
+    }
+
+    .hero-date {
+        font-size: 1.7rem;
+        margin-top: 1.2rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        max-width: 320px;
+        margin: 1.2rem auto 0;
+    }
+
+    .hero::before,
+    .hero::after {
+        width: 90px;
+        height: 90px;
+        opacity: 0.18;
+        z-index: 0;
+    }
+
+    .hero::before {
+        top: 10px;
+        left: 10px;
+    }
+
+    .hero::after {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .hero-glow {
+        width: 220px;
+        height: 220px;
+        filter: blur(60px);
+        opacity: 0.22;
+    }
+
+    .countdown {
+        gap: 0.8rem;
+        margin-top: 2.5rem;
+    }
+
+    .countdown-item {
+        min-width: 88px;
+        padding: 1rem;
+        border-radius: 22px;
+    }
+
+    .countdown-item span {
+        font-size: 2.2rem;
+    }
+
+    .countdown-item small {
+        font-size: 0.62rem;
+        letter-spacing: 0.12rem;
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .glass-card,
+    .important-card {
+        padding: 1.5rem;
+        border-radius: 24px;
+    }
+
+    .timeline::before,
+    .timeline-content::before {
+        display: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-time {
+        font-size: 1.4rem;
+        padding-top: 0;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .location-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .map-links {
+        flex-direction: column;
+    }
+
+    .map-links a,
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    .wedding-image-card {
+        padding: 0.8rem;
+        border-radius: 24px;
+    }
+
+    .wedding-image-card img {
+        border-radius: 18px;
+    }
+
+    .important-card h3 {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding: 3rem 1.5rem;
+    }
+}
